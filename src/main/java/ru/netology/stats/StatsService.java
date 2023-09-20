@@ -3,8 +3,8 @@ package ru.netology.stats;
 public class StatsService {
     public int getSumma(int[] sales) {
         int summa = 0;
-        for (int s : sales) {
-            summa = summa + s;
+        for (int sale : sales) {
+            summa = summa + sale;
         }
         return summa;
     }
@@ -35,18 +35,21 @@ public class StatsService {
 
     public int getSalesAboveAverage(int[] sales) {
         int aboveAverage = 0;
-        for (int s : sales) {
-            if (getAverageSales(sales) < s) {
+        int averageSale = getAverageSales(sales);
+        for (int sale : sales) {
+            if (averageSale < sale) {
                 aboveAverage++;
             }
         }
         return aboveAverage;
 
     }
+
     public int getSalesBelowAverage(int[] sales) {
         int aboveAverage = 0;
-        for (int s : sales) {
-            if (getAverageSales(sales) > s) {
+        int averageSale = getAverageSales(sales);
+        for (int sale : sales) {
+            if (averageSale > sale) {
                 aboveAverage++;
             }
         }

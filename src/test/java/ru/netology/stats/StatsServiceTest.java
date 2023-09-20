@@ -41,16 +41,17 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void shouldGetSalesAboveAverage(){
-        int[] sales = {24, 14, 15, 35,71};
+    public void shouldGetSalesAboveAverage() {
+        int[] sales = {24, 14, 15, 35, 71};
         StatsService service = new StatsService();
         int expected = 2;
         int actual = service.getSalesAboveAverage(sales);
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldGetSalesBelowAverage(){
-        int[] sales = {24, 14, 15, 35,71};
+    public void shouldGetSalesBelowAverage() {
+        int[] sales = {24, 14, 15, 35, 71};
         StatsService service = new StatsService();
         int expected = 3;
         int actual = service.getSalesBelowAverage(sales);
